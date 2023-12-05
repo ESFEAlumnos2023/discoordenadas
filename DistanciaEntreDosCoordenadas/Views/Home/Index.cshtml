@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="mb-4">Formulario Bootstrap</h2>
+
+            <!-- Formulario Bootstrap -->
+            <form asp-action="CalcularLasDistancia" method="get">
+                <!-- Campo para la primera variable -->
+                <div class="form-group">
+                    <label for="variable1">latitudPunto 1:</label>
+                    <input type="text" class="form-control" name="latitudPunto1" value="@ViewBag.LatitudPunto1" required>
+                </div>
+
+                <!-- Campo para la segunda variable -->
+                <div class="form-group">
+                    <label for="variable2">longitudPunto 1:</label>
+                    <input type="text" class="form-control" name="longitudPunto1" value="@ViewBag.LongitudPunto1" required>
+                </div>
+
+                <!-- Campo para la tercera variable -->
+                <div class="form-group">
+                    <label for="variable3">latitudPunto 2:</label>
+                    <input type="text" class="form-control" name="latitudPunto2" value="@ViewBag.LatitudPunto2" required>
+                </div>
+
+                <!-- Campo para la cuarta variable -->
+                <div class="form-group">
+                    <label for="variable4">longitudPunto 2:</label>
+                    <input type="text" class="form-control" name="longitudPunto2" value="@ViewBag.LongitudPunto2" required>
+                </div>
+                <div class="form-group">
+                    <label for="variable4">La distancia en kilometros es:</label>
+                    <input type="text" class="form-control" disabled value="@ViewBag.Distancia">
+                </div>
+                <!-- Botón de envío -->
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
